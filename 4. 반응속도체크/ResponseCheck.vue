@@ -1,4 +1,5 @@
 <!-- 뷰에서는 바뀌는거 위주로 생각하고 바뀌는걸 데이터로 만들어줘야한다. -->
+<!-- v-show="result.length : v-show를 하면 result.length가 false면 display=none이 되고 true면 화면에 보인다. -->
 <template>
   <div>
     <div id="screen" :class="state" @click="onClickScreen">{{message}}</div>
@@ -14,6 +15,8 @@
   let startTime = 0;
   let endTime = 0;
   let timeout = null;
+// computed: 일반 데이터를 가공해서 쓸때 computed 사용
+// 데이터가 바뀌면 computed도 자동으로 바뀐다.
   export default {
     data() {
       return {
@@ -22,8 +25,8 @@
         message: '클릭해서 시작하세요.',
       };
     },
-    computed: {
-      average() {
+    computed: { // 데이터 계산
+      average() { // 평균계산
         return this.result.reduce((a, c) => a + c, 0) / this.result.length || 0;
       }
     },
