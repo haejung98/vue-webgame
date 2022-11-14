@@ -10,19 +10,11 @@
         rowIndex: Number,
         cellIndex: Number,
     },
-    components: {
-
-    },
-    data() {
-      return {
-
-      };
-    },
-    computed: {
-      
-    },
     methods: {
         onClickTd() {
+            // 남이 누른칸을 또 누르면 중단
+            if (this.cellData) return;
+
             // 자식컴포넌트에서 부모 컴포넌트 데이터를 조작할 수 있음
             console.log(this.$root.$data); // 가장 최상위 부모(TicTacToe.vue) 데이터 한방에 접근할 수 있음
             console.log(this.$parent.$data); // 부모 컴포넌트 데이터에 접근
