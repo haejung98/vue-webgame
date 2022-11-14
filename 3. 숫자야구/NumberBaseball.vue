@@ -12,7 +12,7 @@
         <div>시도: {{tries.length}}</div>
         <ul>
             <!--<li v-for="t in tries" v-bind:key = "t">{{t}}</li> , this.tries.push(this.value) -->
-            <li v-for="t in tries" v-bind:key = "t">
+            <li v-for="t in tries" v-bind:key = "t.try"> <!-- li태그 각각 구별해줄때 붙이는 이름 = key -->
                 <div>{{t.try}}</div>
                 <div>{{t.result}}</div>
             </li>
