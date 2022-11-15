@@ -1,0 +1,36 @@
+<template>
+    <table>
+        <tr-component v-for="(rowData, index) in tableData" :key="index" :row-data="rowData" :row-index="index"></tr-component> <!-- tr이 row -->
+    </table>
+</template>
+
+<script>
+  import TrComponent from './TrComponent';
+  export default {
+    props: {
+        tableData: Array,
+    },
+    components: {
+        TrComponent,
+    },
+    data() {
+      return {
+      };
+    },
+    computed: {
+      
+    },
+    methods: {
+     
+    },
+    mounted() {
+
+    },
+    beforeDestroy() {
+
+    },
+    watch: {
+
+    },
+  };
+</script>
