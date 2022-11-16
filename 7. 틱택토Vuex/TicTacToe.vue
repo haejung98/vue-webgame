@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>{{turn}}님의 턴입니다.</div>
-    <table-component>
+    <table-component> <!-- slot -->
       <tr v-for="(rowData, rowIndex) in tableData" :key="rowIndex">
         <td @click="onClickTd(rowIndex, cellIndex)" v-for="(cellData, cellIndex) in rowData" :key="cellIndex">{{cellData}}</td>
       </tr>

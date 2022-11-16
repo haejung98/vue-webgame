@@ -17,7 +17,7 @@
         tableData: state => state.tableData,
         turn: state => state.turn,
         cellData(state) {
-          return state.tableData[this.rowIndex][this.cellIndex];
+          return state.tableData[this.rowIndex][this.cellIndex];  // vuex를 쓰면 배열때문에 computed가 매번 실행된다.
         },
       }),
       // vuex state 가져옴
